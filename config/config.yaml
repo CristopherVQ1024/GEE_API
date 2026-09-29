@@ -111,7 +111,7 @@ tiling:
   patch_size_px: 256
   stride_px: 256          # sin solape; usar < patch_size_px para solape
   scale_m: 10
-  max_pixels_export: 1.0e13
+  max_pixels_export: 10000000000000 
 
 # -----------------------------------------------------------------------------
 # Validación espacial (Spatial K-Fold) — evita spatial leakage

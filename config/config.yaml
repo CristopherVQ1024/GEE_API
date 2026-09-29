@@ -1,0 +1,160 @@
+# =============================================================================
+# Configuración del proyecto
+# Detección de tala selectiva en Madre de Dios mediante Deep Learning
+# y análisis multitemporal de Sentinel-2 en la nube (GEE)
+# =============================================================================
+
+gee:
+  # Reemplaza con tu Project ID de Google Cloud registrado para Earth Engine.
+  # Desde 2025 GEE EXIGE un Cloud Project registrado (no comercial) para
+  # ee.Initialize(). Créalo/regístralo en https://code.earthengine.google.com/register
+  project_id: "geeproject-510101 "
+
+# -----------------------------------------------------------------------------
+# Área de Estudio (ROI)
+# Zona representativa sugerida: corredor de la Carretera Interoceánica Sur,
+# provincia de Tahuamanu, Madre de Dios, entre Iberia e Iñapari.
+# Es una de las zonas con patrón de tala selectiva / fragmentación en "espina
+# de pescado" mejor documentado en la literatura para la Amazonía peruana
+# (frontera agrícola a lo largo de la vía, cerca del límite con Brasil/Bolivia).
+# AJUSTA estas coordenadas visualmente en el notebook exploratorio antes de
+# exportar todo el dataset: usa geemap para confirmar que cubre tu patrón de
+# interés y no zonas irrelevantes (ríos grandes, centros urbanos).
+# -----------------------------------------------------------------------------
+roi:
+  name: "corredor_iberia_inapari"
+  # bounding box [lon_min, lat_min, lon_max, lat_max] en EPSG:4326
+  bbox: [-69.75, -11.55, -69.30, -10.85]
+  department: "MADRE DE DIOS"
+  province: "TAHUAMANU"
+
+# -----------------------------------------------------------------------------
+# Ventanas temporales para el análisis multitemporal
+# Se recomienda usar la temporada seca (may-oct) para minimizar nubes en
+# la Amazonía sur peruana.
+# t0 = periodo base ("antes"), t1 = periodo de comparación ("después")
+# Puedes agregar más periodos para una serie temporal más larga.
+# -----------------------------------------------------------------------------
+temporal_windows:
+  - id: "t0_2022"
+    start_date: "2022-05-01"
+    end_date: "2022-10-31"
+  - id: "t1_2023"
+    start_date: "2023-05-01"
+    end_date: "2023-10-31"
+  - id: "t2_2024"
+    start_date: "2024-05-01"
+    end_date: "2024-10-31"
+  - id: "t3_2025"
+    start_date: "2025-05-01"
+    end_date: "2025-10-31"
+
+# Par de referencia usado por defecto para las diferencias (dNDVI, dNBR, etc.)
+# usadas como proxy de disturbio en labels.py
+default_change_pair:
+  before: "t0_2022"
+  after: "t2_2024"
+
+sentinel2:
+  collection: "COPERNICUS/S2_SR_HARMONIZED"
+  max_cloud_pct: 20
+  bands: ["B2", "B3", "B4", "B8", "B11", "B12"]
+  texture_kernel_radius_px: 1   # 3x3 píxeles ~ 30m en resolución 10m
+
+# -----------------------------------------------------------------------------
+# Datasets de referencia / validación
+# -----------------------------------------------------------------------------
+reference_datasets:
+  hansen_gfc:
+    asset_id: "UMD/hansen/global_forest_change_2025_v1_13"
+    note: >
+      Usado como máscara de DEFORESTACIÓN TOTAL (no selectiva). Sirve para
+      (a) excluir píxeles ya totalmente deforestados de la clase "tala
+      selectiva" y (b) como fuente adicional de validación cruzada de
+      pérdida de bosque a nivel de píxel, con lossyear disponible 2001-2025.
+  geobosques:
+    portal: "https://geobosques.minam.gob.pe"
+    modules_available_2026:
+      - "Bosque y pérdida de bosque (WMS raster anual 2001-2025)"
+      - "Alerta temprana (raster, actualización ~cada 21-26 días)"
+      - "Uso y cambio de uso de la tierra"
+      - "Degradación (submódulo mencionado en 'Acerca de', SIN endpoint de descarga masiva confirmado a la fecha)"
+    note: >
+      IMPORTANTE (ver README, sección "Caveat sobre ground truth"): no se
+      confirmó un endpoint público de descarga de POLÍGONOS de tala
+      selectiva/degradación. Lo verificado y descargable son capas WMS
+      raster de pérdida de bosque total y alertas tempranas. Contactar a
+      PNCBMCC (geobosques.minam.gob.pe/geobosque/view/contacto.php) para
+      solicitar acceso a datos vectoriales del submódulo de Degradación.
+  global_forest_watch:
+    api_docs: "https://data-api.globalforestwatch.org/"
+    datasets_of_interest:
+      - "GLAD deforestation alerts (Landsat, desde 2016)"
+      - "GLAD-S2 alerts (Sentinel-2, mayor resolución temporal/espacial)"
+      - "Integrated deforestation alerts"
+    note: >
+      Usar como fuente de validación cruzada independiente y, si se dispone
+      de polígonos con fecha, para el análisis opcional de latencia de
+      detección (Fase 5 en el README).
+  fodex_inapari:
+    status: "NO CONFIRMADO"
+    note: >
+      Parcelas de campo con ΔAGB en Iñapari. Requiere verificar con tu
+      asesor/universidad si hay convenio de acceso. NO construir el pipeline
+      asumiendo esta fuente hasta confirmarla (ver AskUserQuestion en la
+      conversación: respuesta = "no estoy seguro, hay que verificar").
+
+# -----------------------------------------------------------------------------
+# Tiling / parches para el modelo
+# -----------------------------------------------------------------------------
+tiling:
+  patch_size_px: 256
+  stride_px: 256          # sin solape; usar < patch_size_px para solape
+  scale_m: 10
+  max_pixels_export: 1.0e13
+
+# -----------------------------------------------------------------------------
+# Validación espacial (Spatial K-Fold) — evita spatial leakage
+# -----------------------------------------------------------------------------
+spatial_kfold:
+  n_folds: 5
+  block_size_km: 20
+  random_seed: 42
+  held_out_external_fold: true   # 1 fold reservado exclusivamente para
+                                  # validación externa final (nunca visto
+                                  # en entrenamiento ni en tuning)
+
+# -----------------------------------------------------------------------------
+# Modelo
+# -----------------------------------------------------------------------------
+model:
+  architecture: "unet"
+  encoder: "resnet34"
+  encoder_weights: "imagenet"   # fine-tuning desde ImageNet
+  in_channels: 8                # B2,B3,B4,B8,B11,B12,NDVI,sigma_NIR
+  classes: 1                    # binario: tala selectiva vs. no
+  loss:
+    bce_weight: 0.5
+    dice_weight: 0.5
+  optimizer:
+    name: "AdamW"
+    lr: 1.0e-4
+    weight_decay: 1.0e-4
+  scheduler:
+    name: "ReduceLROnPlateau"
+    factor: 0.5
+    patience: 5
+  training:
+    batch_size: 16
+    epochs: 60
+    early_stopping_patience: 10
+    num_workers: 4
+
+paths:
+  data_raw: "data/raw"
+  data_processed: "data/processed"
+  patches_images: "data/processed/images"
+  patches_masks: "data/processed/masks"
+  outputs: "outputs"
+  checkpoints: "outputs/checkpoints"
+  metrics: "outputs/metrics"

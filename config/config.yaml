@@ -8,7 +8,7 @@ gee:
   # Reemplaza con tu Project ID de Google Cloud registrado para Earth Engine.
   # Desde 2025 GEE EXIGE un Cloud Project registrado (no comercial) para
   # ee.Initialize(). Créalo/regístralo en https://code.earthengine.google.com/register
-  project_id: "geeproject-510101 "
+  project_id: "geeproject-510101"
 
 # -----------------------------------------------------------------------------
 # Área de Estudio (ROI)

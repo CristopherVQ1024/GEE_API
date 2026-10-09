@@ -26,8 +26,13 @@ import rasterio
 import torch
 from torch.utils.data import Dataset
 
-# Debe coincidir con el orden de bandas producido en gee_exporter.build_feature_stack
-BAND_NAMES = ["B2", "B3", "B4", "B8", "B11", "B12", "NDVI", "sigma_NIR"]
+# Debe coincidir con feature_bands de bands.json (notebook 01_exploratory_analysis_v2):
+# bitemporal 2024->2025 con NDFI. 15 bandas.
+BAND_NAMES = [
+    "B2", "B3", "B4", "B8", "B11", "B12",
+    "NDVI_t1", "NDFI_t0", "NDFI_t1", "dNDFI",
+    "NPV_t1", "Soil_t1", "sigma_NIR_t0", "sigma_NIR_t1", "dNBR",
+]
 
 
 def _read_raster(path: str) -> np.ndarray:

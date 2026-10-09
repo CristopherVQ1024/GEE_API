@@ -1,0 +1,16 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Usando device: cpu
+[fold 0] epoch 1/60 train_loss=0.6852 val_loss=0.6897 IoU=0.0044 F1=0.0088 Prec=0.0051 Rec=0.0333
+[fold 0] epoch 2/60 train_loss=0.6338 val_loss=0.5865 IoU=0.0010 F1=0.0020 Prec=0.0103 Rec=0.0011
+[fold 0] epoch 3/60 train_loss=0.5949 val_loss=0.5789 IoU=0.0000 F1=0.0000 Prec=0.0000 Rec=0.0000
+[fold 0] epoch 4/60 train_loss=0.5785 val_loss=0.5715 IoU=0.0000 F1=0.0000 Prec=0.0000 Rec=0.0000
+[fold 0] epoch 5/60 train_loss=0.5687 val_loss=0.5628 IoU=0.0000 F1=0.0000 Prec=0.0000 Rec=0.0000
+[fold 0] epoch 6/60 train_loss=0.5607 val_loss=0.5570 IoU=0.0000 F1=0.0000 Prec=0.0000 Rec=0.0000
+[fold 0] epoch 7/60 train_loss=0.5550 val_loss=0.5523 IoU=0.0000 F1=0.0000 Prec=0.0000 Rec=0.0000
+[fold 0] epoch 8/60 train_loss=0.5497 val_loss=0.5467 IoU=0.0000 F1=0.0000 Prec=0.0000 Rec=0.0000
+[fold 0] epoch 9/60 train_loss=0.5455 val_loss=0.5424 IoU=0.0000 F1=0.0000 Prec=0.0000 Rec=0.0000
+[fold 0] epoch 10/60 train_loss=0.5415 val_loss=0.5392 IoU=0.0000 F1=0.0000 Prec=0.0000 Rec=0.0000
+[fold 0] epoch 11/60 train_loss=0.5378 val_loss=0.5370 IoU=0.0000 F1=0.0000 Prec=0.0000 Rec=0.0000
+[fold 0] epoch 12/60 train_loss=0.5349 val_loss=0.5343 IoU=0.0000 F1=0.0000 Prec=0.0000 Rec=0.0000
+[fold 0] epoch 13/60 train_loss=0.5315 val_loss=0.5322 IoU=0.0000 F1=0.0000 Prec=0.0000 Rec=0.0000
+[fold 0] epoch 14/60 train_loss=0.5283 val_loss=0.5304 IoU=0.0113 F1=0.0223 Prec=0.1123 Rec=0.0124

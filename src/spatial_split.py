@@ -119,15 +119,48 @@ def summarize_split(df: pd.DataFrame) -> pd.DataFrame:
     )
 
 
+def split_dataset_v2(metadata_path: str, out_path: str, n_folds: int = 5,
+                     block_size_km: int = 20, seed: int = 42) -> pd.DataFrame:
+    """
+    Dataset v2: aplica el K-fold espacial SOLO a las filas con
+    split_role == 'train' (Tambopata). Las demás (split_role == 'test_transfer',
+    Tahuamanu) reciben fold = 'external_holdout', que src/train.py nunca usa
+    para entrenar ni validar.
+    """
+    df = pd.read_csv(metadata_path)
+    df.columns = [c.strip() for c in df.columns]
+    is_train = df["split_role"] == "train"
+    cfg = SpatialKFoldConfig(n_folds=n_folds, block_size_km=block_size_km,
+                             random_seed=seed, held_out_external_fold=False)
+    tr = spatial_kfold_split(df[is_train], cfg=cfg)
+    out = df.copy()
+    out["block_id"] = tr["block_id"]
+    out["fold"] = tr["fold"].astype(object)
+    out.loc[~is_train, "fold"] = "external_holdout"
+    out.to_csv(out_path, index=False)
+    print(summarize_split(out))
+    return out
+
+
 if __name__ == "__main__":
-    # Ejemplo mínimo con datos sintéticos, solo para verificar que el
-    # algoritmo corre. Sustituye por tus metadatos reales de parches
-    # (típicamente un CSV generado al exportar los tiles desde GEE).
-    rng = np.random.RandomState(0)
-    demo = pd.DataFrame({
-        "patch_id": [f"p{i}" for i in range(500)],
-        "lon_center": rng.uniform(-69.75, -69.30, 500),
-        "lat_center": rng.uniform(-11.55, -10.85, 500),
-    })
-    split = spatial_kfold_split(demo)
-    print(summarize_split(split))
+    import argparse
+
+    ap = argparse.ArgumentParser(description="K-fold espacial para el dataset v2")
+    ap.add_argument("--metadata", help="patches_metadata.csv (con split_role)")
+    ap.add_argument("--out", default="data/processed/patches_metadata.csv")
+    ap.add_argument("--n-folds", type=int, default=5)
+    ap.add_argument("--block-km", type=int, default=10,
+                    help="Tamaño de bloque; con 10 km Tambopata da 5 folds de 96 parches")
+    args = ap.parse_args()
+    if args.metadata:
+        split_dataset_v2(args.metadata, args.out, n_folds=args.n_folds,
+                         block_size_km=args.block_km)
+    else:
+        # Sin argumentos: demo con datos sintéticos para verificar que corre.
+        rng = np.random.RandomState(0)
+        demo = pd.DataFrame({
+            "patch_id": [f"p{i}" for i in range(500)],
+            "lon_center": rng.uniform(-69.75, -69.30, 500),
+            "lat_center": rng.uniform(-11.55, -10.85, 500),
+        })
+        print(summarize_split(spatial_kfold_split(demo)))

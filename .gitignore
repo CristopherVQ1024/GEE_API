@@ -1,0 +1,14 @@
+# Entornos y caché
+.venv/
+.venv-gpu/
+__pycache__/
+*.pyc
+
+# Datos pesados (se regeneran con src/prepare_dataset.py desde dataset/)
+dataset/
+data/processed/images/
+data/processed/masks/
+
+# Checkpoints de modelos (~98 MB c/u)
+outputs/checkpoints/*.pt
+outputs/checkpoints/*.bak

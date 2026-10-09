@@ -77,14 +77,15 @@ class SelectiveLoggingDataset(Dataset):
         if mask.ndim == 2:
             mask = np.expand_dims(mask, axis=0)
 
-        # Reemplaza NaN (bordes sin datos por nubes/mosaico) por 0 tras
-        # normalizar, para no romper el entrenamiento.
-        img = np.nan_to_num(img, nan=0.0)
-
         if self.normalize_stats is not None:
             mean = np.array(self.normalize_stats["mean"], dtype=np.float32).reshape(-1, 1, 1)
             std = np.array(self.normalize_stats["std"], dtype=np.float32).reshape(-1, 1, 1)
             img = (img - mean) / np.clip(std, 1e-6, None)
+
+        # Reemplaza NaN (píxeles inválidos por nubes/mosaico) por 0 DESPUÉS de
+        # normalizar (0 = media de la banda), para no romper el entrenamiento.
+        img = np.nan_to_num(img, nan=0.0)
+        mask = np.nan_to_num(mask, nan=0.0)
 
         if self.transform is not None:
             # albumentations espera HWC

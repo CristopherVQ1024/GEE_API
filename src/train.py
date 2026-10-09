@@ -56,8 +56,10 @@ def train_one_fold(cfg: dict, metadata: pd.DataFrame, val_fold: int, device: tor
     validación y la ruta del mejor checkpoint para este fold.
     """
     cv_pool = metadata[metadata["fold"] != "external_holdout"].copy()
-    train_df = cv_pool[cv_pool["fold"] != val_fold]
-    val_df = cv_pool[cv_pool["fold"] == val_fold]
+    # El CSV mezcla folds numéricos y 'external_holdout' -> se lee como texto.
+    fold_str = cv_pool["fold"].astype(str)
+    train_df = cv_pool[fold_str != str(val_fold)]
+    val_df = cv_pool[fold_str == str(val_fold)]
 
     images_dir = cfg["paths"]["patches_images"]
     masks_dir = cfg["paths"]["patches_masks"]

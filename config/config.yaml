@@ -145,6 +145,7 @@ model:
   loss:
     bce_weight: 0.5
     dice_weight: 0.5
+    pos_weight: null    # peso de positivos en BCE; null = sin ponderar (ej. 10)
   optimizer:
     name: "AdamW"
     lr: 1.0e-4

@@ -86,7 +86,12 @@ def train_one_fold(cfg: dict, metadata: pd.DataFrame, val_fold: int, device: tor
         classes=model_cfg["classes"],
     ).to(device)
 
-    loss_fn = BCEDiceLoss(bce_weight=model_cfg["loss"]["bce_weight"], dice_weight=model_cfg["loss"]["dice_weight"])
+    pos_weight = model_cfg["loss"].get("pos_weight")
+    loss_fn = BCEDiceLoss(
+        bce_weight=model_cfg["loss"]["bce_weight"],
+        dice_weight=model_cfg["loss"]["dice_weight"],
+        pos_weight=torch.tensor([float(pos_weight)], device=device) if pos_weight else None,
+    )
 
     opt_cfg = model_cfg["optimizer"]
     optimizer = torch.optim.AdamW(model.parameters(), lr=opt_cfg["lr"], weight_decay=opt_cfg["weight_decay"])
@@ -195,7 +200,16 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--metadata", type=str, required=True,
                          help="CSV con patch_id, lon_center, lat_center, fold (ver src/spatial_split.py)")
+    parser.add_argument("--pos_weight", type=float, default=None,
+                         help="Peso de la clase positiva en BCE (ej. 10). Sobrescribe model.loss.pos_weight")
+    parser.add_argument("--tag", type=str, default=None,
+                         help="Guarda checkpoints/métricas en outputs/<tag>/ en vez de outputs/")
     args = parser.parse_args()
 
     cfg = load_config()
+    if args.pos_weight is not None:
+        cfg["model"]["loss"]["pos_weight"] = args.pos_weight
+    if args.tag:
+        cfg["paths"]["checkpoints"] = f"outputs/{args.tag}/checkpoints"
+        cfg["paths"]["metrics"] = f"outputs/{args.tag}/metrics"
     run_spatial_cross_validation(cfg, args.metadata)

@@ -6,7 +6,7 @@ Construcción del modelo de segmentación U-Net usando
 pre-entrenados en ImageNet (fine-tuning) y es el paquete que definiste en
 tu stack tecnológico.
 
-Se adapta el encoder para aceptar `in_channels` != 3 (aquí 8: 6 bandas
+Se adapta el encoder para aceptar `in_channels` != 3 (aquí 15: 6 bandas
 Sentinel-2 + NDVI + sigma_NIR), lo cual SMP soporta nativamente
 reinicializando la primera capa convolucional.
 """
@@ -19,7 +19,7 @@ import torch.nn as nn
 def build_unet(
     encoder_name: str = "resnet34",
     encoder_weights: str | None = "imagenet",
-    in_channels: int = 8,
+    in_channels: int = 15,
     classes: int = 1,
 ) -> nn.Module:
     """
@@ -44,6 +44,6 @@ if __name__ == "__main__":
     import torch
 
     model = build_unet()
-    x = torch.randn(2, 8, 256, 256)
+    x = torch.randn(2, 15, 256, 256)
     y = model(x)
     print("Input:", x.shape, "-> Output:", y.shape)  # esperado: (2, 1, 256, 256)

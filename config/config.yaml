@@ -22,11 +22,20 @@ gee:
 # interés y no zonas irrelevantes (ríos grandes, centros urbanos).
 # -----------------------------------------------------------------------------
 roi:
-  name: "corredor_iberia_inapari"
+  name: "tambopata_train"
   # bounding box [lon_min, lat_min, lon_max, lat_max] en EPSG:4326
-  bbox: [-69.75, -11.55, -69.30, -10.85]
+  bbox: [-70.3094, -13.1824, -69.7411, -12.7173]
   department: "MADRE DE DIOS"
-  province: "TAHUAMANU"
+  province: "TAMBOPATA"
+
+# Zonas de estudio del dataset v2 (600 parches 256x256 a 10 m, EPSG:32719)
+study_areas:
+  tambopata:                    # entrenamiento + K-fold espacial (480 parches)
+    role: train
+    bbox: [-70.3094, -13.1824, -69.7411, -12.7173]
+  tahuamanu:                    # transferencia externa, solo prueba (120 parches)
+    role: test_transfer
+    bbox: [-69.871, -11.1611, -69.5892, -10.9289]
 
 # -----------------------------------------------------------------------------
 # Ventanas temporales para el análisis multitemporal
@@ -131,7 +140,7 @@ model:
   architecture: "unet"
   encoder: "resnet34"
   encoder_weights: "imagenet"   # fine-tuning desde ImageNet
-  in_channels: 8                # B2,B3,B4,B8,B11,B12,NDVI,sigma_NIR
+  in_channels: 15               # ver BAND_NAMES en src/dataset.py (bands.json)
   classes: 1                    # binario: tala selectiva vs. no
   loss:
     bce_weight: 0.5

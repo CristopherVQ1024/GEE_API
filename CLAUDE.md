@@ -40,5 +40,6 @@ streamlit run app_streamlit.py
 ## Estado y trampas
 
 - `data/` y `outputs/` están vacíos hasta que se copie el dataset desde Drive.
-- Hay cambios locales sin commit en `dataset.py`, `spatial_split.py`, `train.py`.
-- Pendiente de la investigación: fotointerpretar 50–100 parches, verificar endmembers NDFI, reemplazar NaN por 0 tras normalizar.
+- Etiquetas v3 (`src/refine_labels.py` → `data/processed/masks_v3`, `patches_metadata_v3.csv` con columna `noisy`) y modelo v3 (`outputs/v3/checkpoints`) son los predeterminados en `config.yaml`. Evaluación contra fotointerpretación: `python -m src.evaluate_patch_level --ckpt outputs/v3/checkpoints --tag v3` (etiquetas en `data/labeling/`).
+- Los parches miden 256×257 (no 256×256): cualquier aumento con rotación debe recortar a cuadrado.
+- Pendiente: falsos positivos del modelo v3 en quebradas sinuosas y bordes de minería.

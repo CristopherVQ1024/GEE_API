@@ -164,7 +164,7 @@ paths:
   data_raw: "data/raw"
   data_processed: "data/processed"
   patches_images: "data/processed/images"
-  patches_masks: "data/processed/masks"
+  patches_masks: "data/processed/masks_v3"  # etiquetas v3 (src/refine_labels.py); débiles en data/processed/masks
   outputs: "outputs"
-  checkpoints: "outputs/checkpoints"
+  checkpoints: "outputs/v3/checkpoints"   # modelo v3 (etiquetas refinadas); base en outputs/checkpoints
   metrics: "outputs/metrics"

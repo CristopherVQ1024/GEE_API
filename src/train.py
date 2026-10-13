@@ -49,6 +49,17 @@ def get_device() -> torch.device:
     return torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
+def flip_rot90(image, mask):
+    """Aumento geométrico (flips + rotaciones de 90°): no altera los valores espectrales."""
+    s = min(image.shape[0], image.shape[1])  # los parches miden 256x257: recorte cuadrado para rotar
+    image, mask = image[:s, :s], mask[:s, :s]
+    k = np.random.randint(4)
+    image, mask = np.rot90(image, k, axes=(0, 1)), np.rot90(mask, k, axes=(0, 1))
+    if np.random.rand() < 0.5:
+        image, mask = image[:, ::-1], mask[:, ::-1]
+    return {"image": np.ascontiguousarray(image), "mask": np.ascontiguousarray(mask)}
+
+
 def train_one_fold(cfg: dict, metadata: pd.DataFrame, val_fold: int, device: torch.device) -> dict:
     """
     Entrena con todos los folds numéricos != val_fold (excluyendo siempre
@@ -69,7 +80,8 @@ def train_one_fold(cfg: dict, metadata: pd.DataFrame, val_fold: int, device: tor
 
     norm_stats = compute_normalization_stats(train_img_paths)
 
-    train_ds = SelectiveLoggingDataset(train_img_paths, train_mask_paths, normalize_stats=norm_stats)
+    train_ds = SelectiveLoggingDataset(train_img_paths, train_mask_paths, normalize_stats=norm_stats,
+                                       transform=flip_rot90 if cfg["model"]["training"].get("augment") else None)
     val_ds = SelectiveLoggingDataset(val_img_paths, val_mask_paths, normalize_stats=norm_stats)
 
     train_cfg = cfg["model"]["training"]
@@ -164,6 +176,9 @@ def train_one_fold(cfg: dict, metadata: pd.DataFrame, val_fold: int, device: tor
 
 def run_spatial_cross_validation(cfg: dict, metadata_path: str) -> None:
     metadata = pd.read_csv(metadata_path)
+    if "noisy" in metadata.columns:  # parches con dNDFI ruidoso (neblina), ver src/refine_labels.py
+        print(f"Excluyendo {int(metadata['noisy'].sum())} parches ruidosos")
+        metadata = metadata[~metadata["noisy"].astype(bool)]
     device = get_device()
     print(f"Usando device: {device}")
 
@@ -202,6 +217,9 @@ if __name__ == "__main__":
                          help="CSV con patch_id, lon_center, lat_center, fold (ver src/spatial_split.py)")
     parser.add_argument("--pos_weight", type=float, default=None,
                          help="Peso de la clase positiva en BCE (ej. 10). Sobrescribe model.loss.pos_weight")
+    parser.add_argument("--masks_dir", type=str, default=None,
+                         help="Carpeta de máscaras alternativa (ej. data/processed/masks_v3)")
+    parser.add_argument("--augment", action="store_true", help="Flips + rot90 en entrenamiento")
     parser.add_argument("--tag", type=str, default=None,
                          help="Guarda checkpoints/métricas en outputs/<tag>/ en vez de outputs/")
     args = parser.parse_args()
@@ -209,6 +227,9 @@ if __name__ == "__main__":
     cfg = load_config()
     if args.pos_weight is not None:
         cfg["model"]["loss"]["pos_weight"] = args.pos_weight
+    if args.masks_dir:
+        cfg["paths"]["patches_masks"] = args.masks_dir
+    cfg["model"]["training"]["augment"] = args.augment
     if args.tag:
         cfg["paths"]["checkpoints"] = f"outputs/{args.tag}/checkpoints"
         cfg["paths"]["metrics"] = f"outputs/{args.tag}/metrics"

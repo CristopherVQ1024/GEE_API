@@ -12,3 +12,9 @@ data/processed/masks/
 # Checkpoints de modelos (~98 MB c/u)
 outputs/checkpoints/*.pt
 outputs/checkpoints/*.bak
+
+# Checkpoints de cualquier experimento
+outputs/*/checkpoints/*.pt
+outputs/*/checkpoints/*.bak
+data/processed/masks_v3/
+outputs/refine_preview/

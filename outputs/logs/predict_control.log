@@ -1,0 +1,23 @@
+Zona 2.56 km × 2.56 km en EPSG:32719; descargando Sentinel-2 2024 y 2025...
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+Escenas: 20 + 30; píxeles válidos 100%
+
+48 detecciones de confianza alta o media, 40.55 ha (0 de confianza baja aparte); cuadros no evaluables por neblina: 0/1
+  #  1   28.04 ha  prob 0.85 (alta)  -10.98351, -69.80844  calidad ok
+  #  2    3.45 ha  prob 0.84 (alta)  -10.99196, -69.81130  calidad ok
+  #  3    1.59 ha  prob 0.85 (alta)  -10.99766, -69.81045  calidad ok
+  #  4    0.53 ha  prob 0.86 (alta)  -10.98638, -69.80195  calidad ok
+  #  5    0.42 ha  prob 0.86 (alta)  -10.98779, -69.81427  calidad ok
+  #  6    0.37 ha  prob 0.86 (alta)  -10.99431, -69.81172  calidad ok
+  #  7    0.37 ha  prob 0.83 (alta)  -10.99567, -69.81099  calidad ok
+  #  8     0.3 ha  prob 0.89 (alta)  -10.98231, -69.81608  calidad ok
+  #  9     0.3 ha  prob 0.83 (alta)  -10.98322, -69.81508  calidad ok
+  # 10    0.31 ha  prob 0.76 (alta)  -10.97853, -69.81099  calidad ok
+  # 11    0.26 ha  prob 0.84 (alta)  -10.98141, -69.81457  calidad ok
+  # 12    0.26 ha  prob 0.82 (alta)  -10.98952, -69.81011  calidad ok
+  # 13    0.24 ha  prob 0.82 (alta)  -10.98984, -69.80850  calidad ok
+  # 14    0.21 ha  prob 0.88 (alta)  -10.99520, -69.80037  calidad ok
+  # 15    0.19 ha  prob 0.82 (alta)  -10.97980, -69.81068  calidad ok
+
+Salida en outputs/predictions/control_tahuamanu/ (abrir detecciones.kml en Google Earth y panel.png)

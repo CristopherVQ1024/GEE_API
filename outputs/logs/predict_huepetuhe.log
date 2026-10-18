@@ -1,0 +1,23 @@
+Zona 5.12 km × 5.12 km en EPSG:32719; descargando Sentinel-2 2024 y 2025...
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+Escenas: 16 + 25; píxeles válidos 100%
+
+19 detecciones de confianza alta o media, 3.41 ha (1 de confianza baja aparte); cuadros no evaluables por neblina: 0/4
+  #  1     1.0 ha  prob 0.85 (alta)  -12.97610, -70.50632  calidad baja
+  #  2    0.55 ha  prob 0.81 (alta)  -12.98235, -70.51922  calidad baja
+  #  3     0.2 ha  prob 0.89 (alta)  -12.99537, -70.51127  calidad ok
+  #  4     0.2 ha  prob 0.79 (alta)  -12.96873, -70.50623  calidad baja
+  #  5    0.18 ha  prob 0.73 (media)  -12.97040, -70.50642  calidad baja
+  #  7    0.15 ha  prob 0.82 (alta)  -12.98814, -70.52607  calidad baja
+  #  8    0.16 ha  prob 0.70 (media)  -12.97230, -70.50620  calidad baja
+  #  9    0.13 ha  prob 0.83 (alta)  -12.96778, -70.52913  calidad baja
+  # 10    0.12 ha  prob 0.85 (alta)  -12.97503, -70.49677  calidad baja
+  # 11     0.1 ha  prob 0.82 (alta)  -12.97782, -70.53638  calidad baja
+  # 12    0.09 ha  prob 0.89 (alta)  -12.96928, -70.51250  calidad baja
+  # 13    0.09 ha  prob 0.85 (alta)  -12.99420, -70.51049  calidad ok
+  # 14    0.08 ha  prob 0.76 (alta)  -12.99361, -70.53357  calidad baja
+  # 15    0.07 ha  prob 0.85 (alta)  -12.99668, -70.51170  calidad ok
+  # 16    0.07 ha  prob 0.78 (alta)  -12.96687, -70.52281  calidad baja
+
+Salida en outputs/predictions/huepetuhe_mineria/ (abrir detecciones.kml en Google Earth y panel.png)

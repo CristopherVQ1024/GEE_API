@@ -1,0 +1,115 @@
+Zona 2.56 km × 2.56 km en EPSG:32719; descargando Sentinel-2 2024 y 2025...
+Escenas: 20 + 30; píxeles válidos 100%
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+/home/cristopher/Documentos/GitHub/GEE_API/src/predict_area.py:111: DeprecationWarning: The 'shapely.ops.transform()' function is deprecated. Use 'shapely.transform()' or 'shapely.transform_coordseq()' instead. See https://shapely.readthedocs.io/en/latest/manual.html#shapely.ops.transform for more details.
+  ll = shp_transform(to_ll, poly)
+
+47 detecciones evaluables, 40.07 ha; cuadros no evaluables por neblina: 0/1
+  #  1   27.46 ha  prob 0.86  -10.98351, -69.80844  (ok)
+  #  2    3.32 ha  prob 0.86  -10.99173, -69.81126  (ok)
+  #  3     1.6 ha  prob 0.85  -10.99779, -69.81036  (ok)
+  #  4    0.51 ha  prob 0.87  -10.98638, -69.80195  (ok)
+  #  5    0.45 ha  prob 0.92  -10.97598, -69.81652  (ok)
+  #  6    0.37 ha  prob 0.87  -10.98788, -69.81427  (ok)
+  #  7    0.36 ha  prob 0.84  -10.99562, -69.81099  (ok)
+  #  8    0.32 ha  prob 0.89  -10.99422, -69.81167  (ok)
+  #  9    0.29 ha  prob 0.88  -10.98231, -69.81608  (ok)
+  # 10     0.3 ha  prob 0.84  -10.98984, -69.80850  (ok)
+  # 11    0.29 ha  prob 0.84  -10.98318, -69.81508  (ok)
+  # 12    0.28 ha  prob 0.79  -10.97727, -69.81012  (ok)
+  # 13    0.26 ha  prob 0.83  -10.98970, -69.81015  (ok)
+  # 14    0.24 ha  prob 0.86  -10.98141, -69.81457  (ok)
+  # 15    0.22 ha  prob 0.88  -10.99520, -69.80037  (ok)
+
+Salida en outputs/predictions/test_tahuamanu_r007_c002/ (abrir detecciones.kml en Google Earth y panel.png)

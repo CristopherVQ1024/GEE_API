@@ -23,3 +23,5 @@ data/deter/*/masks/
 data/deter/raw/
 data/deter/*/blocks_done/
 data/processed/masks_v3i/
+outputs/predictions/*/features.tif
+outputs/predictions/*/prob.tif

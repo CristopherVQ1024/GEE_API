@@ -1,0 +1,469 @@
+{
+ "nombre": "control_tahuamanu",
+ "centro": [
+  -69.811819,
+  -10.98687
+ ],
+ "lado_km": 2.56,
+ "anios": [
+  2024,
+  2025
+ ],
+ "escenas": [
+  20,
+  30
+ ],
+ "validos": 1.0,
+ "modelo": "outputs/v7c/checkpoints",
+ "umbral": 0.5,
+ "tta": false,
+ "n_detecciones": 48,
+ "n_baja_confianza": 0,
+ "area_detectada_ha": 40.55,
+ "cuadros_no_evaluables": 0,
+ "cuadros": [
+  {
+   "fila": 0,
+   "col": 0,
+   "ruido_dNDFI": 0.0345,
+   "calidad": "ok",
+   "valido": 1.0,
+   "puntaje_top100": 1.0,
+   "frac_detectada": 0.0626
+  }
+ ],
+ "detecciones": [
+  {
+   "id": 1,
+   "area_ha": 28.04,
+   "prob_media": 0.848,
+   "confianza": "alta",
+   "lon": -69.808442,
+   "lat": -10.983511,
+   "calidad": "ok"
+  },
+  {
+   "id": 2,
+   "area_ha": 3.45,
+   "prob_media": 0.839,
+   "confianza": "alta",
+   "lon": -69.811303,
+   "lat": -10.991958,
+   "calidad": "ok"
+  },
+  {
+   "id": 3,
+   "area_ha": 1.59,
+   "prob_media": 0.853,
+   "confianza": "alta",
+   "lon": -69.810449,
+   "lat": -10.997657,
+   "calidad": "ok"
+  },
+  {
+   "id": 4,
+   "area_ha": 0.53,
+   "prob_media": 0.86,
+   "confianza": "alta",
+   "lon": -69.801952,
+   "lat": -10.986377,
+   "calidad": "ok"
+  },
+  {
+   "id": 5,
+   "area_ha": 0.42,
+   "prob_media": 0.856,
+   "confianza": "alta",
+   "lon": -69.814266,
+   "lat": -10.987791,
+   "calidad": "ok"
+  },
+  {
+   "id": 6,
+   "area_ha": 0.37,
+   "prob_media": 0.861,
+   "confianza": "alta",
+   "lon": -69.811721,
+   "lat": -10.994309,
+   "calidad": "ok"
+  },
+  {
+   "id": 7,
+   "area_ha": 0.37,
+   "prob_media": 0.832,
+   "confianza": "alta",
+   "lon": -69.810993,
+   "lat": -10.995668,
+   "calidad": "ok"
+  },
+  {
+   "id": 8,
+   "area_ha": 0.3,
+   "prob_media": 0.888,
+   "confianza": "alta",
+   "lon": -69.816081,
+   "lat": -10.982315,
+   "calidad": "ok"
+  },
+  {
+   "id": 9,
+   "area_ha": 0.3,
+   "prob_media": 0.835,
+   "confianza": "alta",
+   "lon": -69.815077,
+   "lat": -10.983223,
+   "calidad": "ok"
+  },
+  {
+   "id": 10,
+   "area_ha": 0.31,
+   "prob_media": 0.759,
+   "confianza": "alta",
+   "lon": -69.810992,
+   "lat": -10.978531,
+   "calidad": "ok"
+  },
+  {
+   "id": 11,
+   "area_ha": 0.26,
+   "prob_media": 0.845,
+   "confianza": "alta",
+   "lon": -69.814569,
+   "lat": -10.981414,
+   "calidad": "ok"
+  },
+  {
+   "id": 12,
+   "area_ha": 0.26,
+   "prob_media": 0.822,
+   "confianza": "alta",
+   "lon": -69.810106,
+   "lat": -10.989521,
+   "calidad": "ok"
+  },
+  {
+   "id": 13,
+   "area_ha": 0.24,
+   "prob_media": 0.818,
+   "confianza": "alta",
+   "lon": -69.808505,
+   "lat": -10.989841,
+   "calidad": "ok"
+  },
+  {
+   "id": 14,
+   "area_ha": 0.21,
+   "prob_media": 0.875,
+   "confianza": "alta",
+   "lon": -69.800374,
+   "lat": -10.995198,
+   "calidad": "ok"
+  },
+  {
+   "id": 15,
+   "area_ha": 0.19,
+   "prob_media": 0.816,
+   "confianza": "alta",
+   "lon": -69.810675,
+   "lat": -10.979798,
+   "calidad": "ok"
+  },
+  {
+   "id": 16,
+   "area_ha": 0.19,
+   "prob_media": 0.783,
+   "confianza": "alta",
+   "lon": -69.811802,
+   "lat": -10.99033,
+   "calidad": "ok"
+  },
+  {
+   "id": 17,
+   "area_ha": 0.17,
+   "prob_media": 0.87,
+   "confianza": "alta",
+   "lon": -69.801297,
+   "lat": -10.981224,
+   "calidad": "ok"
+  },
+  {
+   "id": 18,
+   "area_ha": 0.19,
+   "prob_media": 0.748,
+   "confianza": "media",
+   "lon": -69.806779,
+   "lat": -10.994413,
+   "calidad": "ok"
+  },
+  {
+   "id": 19,
+   "area_ha": 0.17,
+   "prob_media": 0.787,
+   "confianza": "alta",
+   "lon": -69.817628,
+   "lat": -10.97901,
+   "calidad": "ok"
+  },
+  {
+   "id": 20,
+   "area_ha": 0.17,
+   "prob_media": 0.787,
+   "confianza": "alta",
+   "lon": -69.812284,
+   "lat": -10.982552,
+   "calidad": "ok"
+  },
+  {
+   "id": 21,
+   "area_ha": 0.18,
+   "prob_media": 0.739,
+   "confianza": "media",
+   "lon": -69.802462,
+   "lat": -10.988727,
+   "calidad": "ok"
+  },
+  {
+   "id": 22,
+   "area_ha": 0.17,
+   "prob_media": 0.723,
+   "confianza": "media",
+   "lon": -69.804584,
+   "lat": -10.995097,
+   "calidad": "ok"
+  },
+  {
+   "id": 23,
+   "area_ha": 0.16,
+   "prob_media": 0.764,
+   "confianza": "alta",
+   "lon": -69.812276,
+   "lat": -10.979522,
+   "calidad": "ok"
+  },
+  {
+   "id": 24,
+   "area_ha": 0.13,
+   "prob_media": 0.861,
+   "confianza": "alta",
+   "lon": -69.804132,
+   "lat": -10.980132,
+   "calidad": "ok"
+  },
+  {
+   "id": 25,
+   "area_ha": 0.15,
+   "prob_media": 0.736,
+   "confianza": "media",
+   "lon": -69.804225,
+   "lat": -10.997539,
+   "calidad": "ok"
+  },
+  {
+   "id": 26,
+   "area_ha": 0.13,
+   "prob_media": 0.838,
+   "confianza": "alta",
+   "lon": -69.801888,
+   "lat": -10.97964,
+   "calidad": "ok"
+  },
+  {
+   "id": 27,
+   "area_ha": 0.14,
+   "prob_media": 0.758,
+   "confianza": "alta",
+   "lon": -69.813181,
+   "lat": -10.975812,
+   "calidad": "ok"
+  },
+  {
+   "id": 28,
+   "area_ha": 0.11,
+   "prob_media": 0.825,
+   "confianza": "alta",
+   "lon": -69.812855,
+   "lat": -10.990553,
+   "calidad": "ok"
+  },
+  {
+   "id": 29,
+   "area_ha": 0.11,
+   "prob_media": 0.811,
+   "confianza": "alta",
+   "lon": -69.815508,
+   "lat": -10.990094,
+   "calidad": "ok"
+  },
+  {
+   "id": 30,
+   "area_ha": 0.11,
+   "prob_media": 0.797,
+   "confianza": "alta",
+   "lon": -69.814501,
+   "lat": -10.990051,
+   "calidad": "ok"
+  },
+  {
+   "id": 31,
+   "area_ha": 0.1,
+   "prob_media": 0.821,
+   "confianza": "alta",
+   "lon": -69.802937,
+   "lat": -10.978326,
+   "calidad": "ok"
+  },
+  {
+   "id": 32,
+   "area_ha": 0.11,
+   "prob_media": 0.738,
+   "confianza": "media",
+   "lon": -69.806516,
+   "lat": -10.981708,
+   "calidad": "ok"
+  },
+  {
+   "id": 33,
+   "area_ha": 0.11,
+   "prob_media": 0.726,
+   "confianza": "media",
+   "lon": -69.802909,
+   "lat": -10.985064,
+   "calidad": "ok"
+  },
+  {
+   "id": 34,
+   "area_ha": 0.11,
+   "prob_media": 0.723,
+   "confianza": "media",
+   "lon": -69.805639,
+   "lat": -10.995817,
+   "calidad": "ok"
+  },
+  {
+   "id": 35,
+   "area_ha": 0.09,
+   "prob_media": 0.833,
+   "confianza": "alta",
+   "lon": -69.813734,
+   "lat": -10.977347,
+   "calidad": "ok"
+  },
+  {
+   "id": 36,
+   "area_ha": 0.1,
+   "prob_media": 0.739,
+   "confianza": "media",
+   "lon": -69.810369,
+   "lat": -10.985134,
+   "calidad": "ok"
+  },
+  {
+   "id": 37,
+   "area_ha": 0.09,
+   "prob_media": 0.741,
+   "confianza": "media",
+   "lon": -69.817784,
+   "lat": -10.985747,
+   "calidad": "ok"
+  },
+  {
+   "id": 38,
+   "area_ha": 0.08,
+   "prob_media": 0.809,
+   "confianza": "alta",
+   "lon": -69.802098,
+   "lat": -10.989451,
+   "calidad": "ok"
+  },
+  {
+   "id": 39,
+   "area_ha": 0.09,
+   "prob_media": 0.702,
+   "confianza": "media",
+   "lon": -69.809371,
+   "lat": -10.988483,
+   "calidad": "ok"
+  },
+  {
+   "id": 40,
+   "area_ha": 0.07,
+   "prob_media": 0.858,
+   "confianza": "alta",
+   "lon": -69.805542,
+   "lat": -10.993873,
+   "calidad": "ok"
+  },
+  {
+   "id": 41,
+   "area_ha": 0.07,
+   "prob_media": 0.842,
+   "confianza": "alta",
+   "lon": -69.815868,
+   "lat": -10.987968,
+   "calidad": "ok"
+  },
+  {
+   "id": 42,
+   "area_ha": 0.07,
+   "prob_media": 0.78,
+   "confianza": "alta",
+   "lon": -69.812085,
+   "lat": -10.97681,
+   "calidad": "ok"
+  },
+  {
+   "id": 43,
+   "area_ha": 0.07,
+   "prob_media": 0.778,
+   "confianza": "alta",
+   "lon": -69.812874,
+   "lat": -10.989332,
+   "calidad": "ok"
+  },
+  {
+   "id": 44,
+   "area_ha": 0.06,
+   "prob_media": 0.85,
+   "confianza": "alta",
+   "lon": -69.805093,
+   "lat": -10.980265,
+   "calidad": "ok"
+  },
+  {
+   "id": 45,
+   "area_ha": 0.06,
+   "prob_media": 0.74,
+   "confianza": "media",
+   "lon": -69.820237,
+   "lat": -10.979094,
+   "calidad": "ok"
+  },
+  {
+   "id": 46,
+   "area_ha": 0.05,
+   "prob_media": 0.795,
+   "confianza": "alta",
+   "lon": -69.801149,
+   "lat": -10.977246,
+   "calidad": "ok"
+  },
+  {
+   "id": 47,
+   "area_ha": 0.05,
+   "prob_media": 0.751,
+   "confianza": "alta",
+   "lon": -69.807993,
+   "lat": -10.986587,
+   "calidad": "ok"
+  },
+  {
+   "id": 48,
+   "area_ha": 0.05,
+   "prob_media": 0.647,
+   "confianza": "media",
+   "lon": -69.81446,
+   "lat": -10.99186,
+   "calidad": "ok"
+  }
+ ]
+}

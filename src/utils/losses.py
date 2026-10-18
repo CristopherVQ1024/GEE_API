@@ -19,8 +19,11 @@ class DiceLoss(nn.Module):
         super().__init__()
         self.smooth = smooth
 
-    def forward(self, logits: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
+    def forward(self, logits: torch.Tensor, targets: torch.Tensor,
+                valid: torch.Tensor | None = None) -> torch.Tensor:
         probs = torch.sigmoid(logits)
+        if valid is not None:  # píxeles ignorados no cuentan ni en predicción ni en objetivo
+            probs, targets = probs * valid, targets * valid
         probs_flat = probs.reshape(probs.size(0), -1)
         targets_flat = targets.reshape(targets.size(0), -1)
 
@@ -39,17 +42,22 @@ class BCEDiceLoss(nn.Module):
     aún más la clase positiva dentro de BCE si el desbalance es extremo
     (p.ej. pos_weight = (n_negativos / n_positivos) calculado sobre tu
     set de entrenamiento).
+
+    Píxeles con objetivo IGNORE (255) no aportan a la pérdida (etiqueta incierta).
     """
+    IGNORE = 255
 
     def __init__(self, bce_weight: float = 0.5, dice_weight: float = 0.5,
                  pos_weight: torch.Tensor | None = None):
         super().__init__()
         self.bce_weight = bce_weight
         self.dice_weight = dice_weight
-        self.bce = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
+        self.bce = nn.BCEWithLogitsLoss(pos_weight=pos_weight, reduction="none")
         self.dice = DiceLoss()
 
     def forward(self, logits: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
-        bce_loss = self.bce(logits, targets)
-        dice_loss = self.dice(logits, targets)
+        valid = (targets != self.IGNORE).float()
+        targets = targets * valid
+        bce_loss = (self.bce(logits, targets) * valid).sum() / valid.sum().clamp(min=1.0)
+        dice_loss = self.dice(logits, targets, valid)
         return self.bce_weight * bce_loss + self.dice_weight * dice_loss

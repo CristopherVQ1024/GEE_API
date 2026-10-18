@@ -76,6 +76,9 @@ class SelectiveLoggingDataset(Dataset):
 
         if mask.ndim == 2:
             mask = np.expand_dims(mask, axis=0)
+        # Recorte cuadrado: los parches GEE miden 256x257 y los de DETER 256x256 (lotes mixtos)
+        s = min(img.shape[1], img.shape[2])
+        img, mask = img[:, :s, :s], mask[:1, :s, :s]
 
         if self.normalize_stats is not None:
             mean = np.array(self.normalize_stats["mean"], dtype=np.float32).reshape(-1, 1, 1)

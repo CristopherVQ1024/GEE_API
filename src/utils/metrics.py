@@ -31,12 +31,13 @@ def confusion_counts(preds: torch.Tensor, targets: torch.Tensor, threshold: floa
     píxel positivo.
     """
     preds_bin = _to_binary(preds, threshold)
-    targets_bin = (targets >= 0.5).float()
+    valid = (targets != 255).float()  # 255 = etiqueta incierta (ignorada)
+    targets_bin = ((targets >= 0.5) & (targets != 255)).float()
 
-    tp = (preds_bin * targets_bin).sum().item()
-    fp = (preds_bin * (1 - targets_bin)).sum().item()
-    fn = ((1 - preds_bin) * targets_bin).sum().item()
-    tn = ((1 - preds_bin) * (1 - targets_bin)).sum().item()
+    tp = (preds_bin * targets_bin * valid).sum().item()
+    fp = (preds_bin * (1 - targets_bin) * valid).sum().item()
+    fn = ((1 - preds_bin) * targets_bin * valid).sum().item()
+    tn = ((1 - preds_bin) * (1 - targets_bin) * valid).sum().item()
 
     return {"tp": tp, "fp": fp, "fn": fn, "tn": tn}
 

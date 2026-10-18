@@ -1,0 +1,98 @@
+{
+ "n_patches": 112,
+ "tag": "v3_parcial",
+ "ckpt": "outputs/v3/checkpoints",
+ "thr": 0.5,
+ "tta": false,
+ "patch": {
+  "n_pos": 45,
+  "n_neg": 39,
+  "top100": {
+   "auc": 0.975,
+   "auc_ic95": [
+    0.946,
+    0.998
+   ],
+   "ap": 0.978,
+   "base": 0.536
+  },
+  "frac": {
+   "auc": 0.972,
+   "auc_ic95": [
+    0.94,
+    0.995
+   ],
+   "ap": 0.975,
+   "base": 0.536
+  }
+ },
+ "patch_by_uf": {
+  "AC": {
+   "n_pos": 6,
+   "n_neg": 8,
+   "auc_top100": 0.958
+  },
+  "AM": {
+   "n_pos": 8,
+   "n_neg": 5,
+   "auc_top100": 1.0
+  },
+  "AP": {
+   "n_pos": 10,
+   "n_neg": 5,
+   "auc_top100": 0.98
+  },
+  "MA": {
+   "n_pos": 1,
+   "n_neg": 12,
+   "auc_top100": 1.0
+  },
+  "PA": {
+   "n_pos": 9,
+   "n_neg": 3,
+   "auc_top100": 1.0
+  },
+  "RO": {
+   "n_pos": 6,
+   "n_neg": 3,
+   "auc_top100": 1.0
+  },
+  "RR": {
+   "n_pos": 5,
+   "n_neg": 3,
+   "auc_top100": 1.0
+  }
+ },
+ "pixel": {
+  "det_density": {
+   "cs": 0.04468,
+   "cs_other": 0.01874,
+   "other": 0.01542,
+   "clean_forest": 0.00629
+  },
+  "lift_cs_vs_clean_forest": 7.1,
+  "lift_other_vs_clean_forest": 2.45,
+  "share_of_detections_in_cs": 0.53
+ },
+ "polygon": {
+  "n": 61,
+  "clean_density_p95": 0.00741,
+  "hit_rate": 0.902,
+  "chance_hit_rate": 0.05,
+  "median_density_ratio": 6.67,
+  "hit_rate_by_uf": {
+   "AC": 0.625,
+   "AM": 1.0,
+   "AP": 1.0,
+   "MA": 1.0,
+   "PA": 0.9,
+   "RO": 0.75,
+   "RR": 1.0
+  }
+ },
+ "block_spearman_det_vs_deter_area": {
+  "rho": 0.357,
+  "p": 0.4316,
+  "n": 7
+ }
+}

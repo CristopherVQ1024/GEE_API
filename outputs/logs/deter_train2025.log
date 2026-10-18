@@ -1,0 +1,153 @@
+    n  cs_km2
+uf           
+AC  7    90.1
+AM  7    94.6
+MT  7   145.1
+PA  7    79.2
+RO  6    33.1
+RR  6    17.8
+[1/40] 32721_31_945 ok
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+[2/40] 32721_68_852 ok
+[3/40] 32620_76_2 ok
+[4/40] 32722_41_957 ok
+[5/40] 32719_49_880 ok
+[6/40] 32721_27_948 ok
+[7/40] 32720_59_871 ok
+[8/40] 32719_57_867 ok
+[9/40] 32722_25_947 ok
+[10/40] 32722_17_843 ERROR APIError: HTTPSConnectionPool(host='earth-search.aws.element84.com', port=443): Read timed out. (read timeout=None)
+[11/40] 32620_78_5 ok
+[12/40] 32720_22_873 ok
+[13/40] 32721_43_847 ok
+[14/40] 32719_38_881 ok
+[15/40] 32722_17_948 ok
+[16/40] 32721_27_947 ok
+[17/40] 32719_79_872 ok
+[18/40] 32621_19_6 ok
+[19/40] 32722_34_945 ok
+===== relanzamiento 2026-10-13 08:39:31 (GPU, workers 2) =====
+    n  cs_km2
+uf           
+AC  7    90.1
+AM  7    94.6
+MT  7   145.1
+PA  7    79.2
+RO  6    33.1
+RR  6    17.8
+[1/40] 32719_49_880 ok
+[2/40] 32721_68_852 ok
+[3/40] 32722_41_957 ok
+[4/40] 32620_76_2 ok
+[5/40] 32720_59_871 ok
+[6/40] 32721_31_945 ok
+[7/40] 32721_27_948 ok
+[8/40] 32722_25_947 ok
+[9/40] 32719_57_867 ok
+[10/40] 32720_22_873 ok
+[11/40] 32620_78_5 ok
+[12/40] 32721_43_847 ok
+[13/40] 32719_38_881 ok
+[14/40] 32721_27_947 ok
+[15/40] 32722_17_948 ok
+[16/40] 32719_79_872 ok
+[17/40] 32621_19_6 ok
+  32722_17_843: escenas 25+34, RAM pico del worker 2.7 GB
+[18/40] 32722_17_843 ok
+  32721_76_848: escenas 47+59, RAM pico del worker 3.2 GB
+[19/40] 32721_76_848 ok
+[20/40] 32722_34_945 ok
+  32719_61_866: escenas 23+28, RAM pico del worker 3.2 GB
+[21/40] 32719_61_866 ok
+  32720_63_837: escenas 23+32, RAM pico del worker 3.4 GB
+[22/40] 32720_63_837 ok
+  32720_68_888: escenas 44+58, RAM pico del worker 3.9 GB
+[23/40] 32720_68_888 ok
+  32621_20_10: escenas 16+29, RAM pico del worker 3.5 GB
+[24/40] 32621_20_10 ok
+  32721_74_846: escenas 46+58, RAM pico del worker 4.1 GB
+[25/40] 32721_74_846 ok
+  32721_57_948: escenas 24+29, RAM pico del worker 4.1 GB
+[26/40] 32721_57_948 ok
+/home/cristopher/.pyenv/versions/3.13.15/lib/python3.13/multiprocessing/resource_tracker.py:479: UserWarning: resource_tracker: There appear to be 5 leaked semaphore objects to clean up at shutdown: {'/mp-8moit0ot', '/mp-auun2mxs', '/mp-mx2lj6ur', '/mp-pl6o5q_i', '/mp-s20isba9'}
+  warnings.warn(
+===== reinicio 2026-10-13 09:30:11 (max_tasks_per_child=3) =====
+    n  cs_km2
+uf           
+AC  7    90.1
+AM  7    94.6
+MT  7   145.1
+PA  7    79.2
+RO  6    33.1
+RR  6    17.8
+[1/40] 32719_49_880 ok
+[2/40] 32721_68_852 ok
+[3/40] 32721_31_945 ok
+[4/40] 32620_76_2 ok
+[5/40] 32722_41_957 ok
+[6/40] 32720_59_871 ok
+[7/40] 32722_17_843 ok
+[8/40] 32721_27_948 ok
+[9/40] 32722_25_947 ok
+[10/40] 32720_22_873 ok
+[11/40] 32719_57_867 ok
+[12/40] 32620_78_5 ok
+[13/40] 32721_43_847 ok
+[14/40] 32721_27_947 ok
+[15/40] 32722_17_948 ok
+[16/40] 32719_38_881 ok
+[17/40] 32719_79_872 ok
+[18/40] 32621_19_6 ok
+[19/40] 32721_76_848 ok
+[20/40] 32722_34_945 ok
+[21/40] 32719_61_866 ok
+[22/40] 32720_68_888 ok
+[23/40] 32720_63_837 ok
+[24/40] 32621_20_10 ok
+[25/40] 32721_74_846 ok
+[26/40] 32721_57_948 ok
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+  32719_39_884: escenas 21+32, RAM pico del worker 2.6 GB
+[27/40] 32719_39_884 ok
+  32720_57_837: escenas 41+52, RAM pico del worker 3.0 GB
+[28/40] 32720_57_837 ok
+  32720_69_887: escenas 44+58, RAM pico del worker 3.1 GB
+[29/40] 32720_69_887 ok
+  32621_22_10: escenas 16+29, RAM pico del worker 3.1 GB
+[30/40] 32621_22_10 ok
+  32721_31_848: escenas 24+35, RAM pico del worker 3.3 GB
+[31/40] 32721_31_848 ok
+  32719_76_876: escenas 42+50, RAM pico del worker 3.8 GB
+[32/40] 32719_76_876 ok
+  32722_19_949: escenas 24+30, RAM pico del worker 3.5 GB
+[33/40] 32722_19_949 ok
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+  32719_52_876: escenas 21+29, RAM pico del worker 2.5 GB
+[34/40] 32719_52_876 ok
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+  32720_31_875: escenas 22+33, RAM pico del worker 2.5 GB
+[35/40] 32720_31_875 ok
+  32621_22_11: escenas 16+29, RAM pico del worker 3.2 GB
+[36/40] 32621_22_11 ok
+  32721_69_845: escenas 24+35, RAM pico del worker 3.2 GB
+[37/40] 32721_69_845 ok
+  32721_55_944: escenas 23+29, RAM pico del worker 3.4 GB
+[38/40] 32721_55_944 ok
+[39/40] 32719_54_872 ERROR TypeError: cannot pickle 'BufferedReader' instances
+[40/40] 32719_63_874 ERROR TypeError: cannot pickle 'BufferedReader' instances
+reintentando 2 bloque(s) fallido(s)
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+  32719_54_872: escenas 21+29, RAM pico del worker 2.5 GB
+[1/2] 32719_54_872 ok
+  32719_63_874: escenas 22+30, RAM pico del worker 2.5 GB
+[2/2] 32719_63_874 ok
+640 parches -> data/deter/train2025

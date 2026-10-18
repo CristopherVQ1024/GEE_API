@@ -27,6 +27,7 @@ excluirlos del entrenamiento.
 Uso:
     python -m src.refine_labels                 # escribe data/processed/masks_v3
     python -m src.refine_labels --preview 20    # PNGs de control en outputs/refine_preview
+    python -m src.refine_labels --uncertain --out data/processed/masks_v3i   # v3 + 255 = incierto (para v4)
 """
 from __future__ import annotations
 
@@ -76,7 +77,9 @@ def _shape(m: np.ndarray) -> tuple[float, float]:
     return float(proj.max() - proj.min()), float(np.sqrt(l1 / max(l2, 1e-6)))
 
 
-def refine(a: np.ndarray, weak: np.ndarray, p: dict = P) -> tuple[np.ndarray, dict]:
+def refine(a: np.ndarray, weak: np.ndarray, p: dict = P, return_uncertain: bool = False):
+    """Etiqueta v3. Con return_uncertain=True devuelve además los candidatos que la regla descartó
+    por forma (cadenas sinuosas o componentes grandes): pueden ser caminos de extracción, no quebradas."""
     t0, t1, dn = a[IDX["NDFI_t0"]], a[IDX["NDFI_t1"]], a[IDX["dNDFI"]]
     b3, b11 = a[IDX["B3"]], a[IDX["B11"]]
     valid = np.isfinite(dn) & np.isfinite(t0) & np.isfinite(t1)
@@ -95,7 +98,8 @@ def refine(a: np.ndarray, weak: np.ndarray, p: dict = P) -> tuple[np.ndarray, di
     info = {"noise": float(noise), "noisy": bool(noise > p["NOISY_STD"]), "forest0_frac": float(forest0.mean())}
     if info["noisy"]:
         info["pos_frac_v3"] = 0.0
-        return np.zeros_like(weak, dtype=np.uint8), info
+        z = np.zeros_like(weak, dtype=np.uint8)
+        return (z, info, z.astype(bool)) if return_uncertain else (z, info)
     T = max(p["T_MIN"], p["K_NOISE"] * noise)
     info["T"] = float(T)
 
@@ -143,6 +147,12 @@ def refine(a: np.ndarray, weak: np.ndarray, p: dict = P) -> tuple[np.ndarray, di
         if area <= p["MAX_PX"] or (area <= p["LINE_MAX_PX"] and straight >= p["STRAIGHT_MIN"]):
             out[sl] |= comp
     info["pos_frac_v3"] = float(out.mean())
+    if return_uncertain:
+        uncertain = (drop | (cand & ~out)) & ~out
+        lab_u, _ = ndi.label(uncertain, structure=np.ones((3, 3)))
+        sizes = np.bincount(lab_u.ravel()); sizes[0] = 0
+        uncertain = np.isin(lab_u, np.nonzero(sizes >= p["MIN_PX"])[0])
+        return out.astype(np.uint8), info, uncertain
     return out.astype(np.uint8), info
 
 
@@ -154,6 +164,8 @@ def main() -> None:
     ap.add_argument("--metadata", default="data/processed/patches_metadata.csv")
     ap.add_argument("--preview", type=int, default=0, help="solo genera N PNGs de control (no escribe máscaras)")
     ap.add_argument("--ids", nargs="*", help="patch_ids concretos para el preview")
+    ap.add_argument("--uncertain", action="store_true",
+                    help="marca con 255 (ignorado al entrenar) lo que la regla descarta por forma (masks_v3i)")
     a = ap.parse_args()
 
     meta = pd.read_csv(a.metadata)
@@ -190,13 +202,18 @@ def main() -> None:
             img = s.read().astype("float32")
         with rasterio.open(f"{a.masks}/{pid}.tif") as s:
             weak = s.read(1); prof = s.profile
-        m, info = refine(img, weak)
+        if a.uncertain:
+            m, info, unc = refine(img, weak, return_uncertain=True)
+            m = np.where(unc & (m == 0), 255, m).astype(np.uint8)
+        else:
+            m, info = refine(img, weak)
         with rasterio.open(f"{a.out}/{pid}.tif", "w", **prof) as d:
             d.write(m[None])
         rows.append({"patch_id": pid, **info})
     info = pd.DataFrame(rows)
     meta = meta.drop(columns=[c for c in info.columns if c != "patch_id" and c in meta.columns]).merge(info, on="patch_id")
-    meta.to_csv(a.metadata.replace(".csv", "_v3.csv"), index=False)
+    if not a.uncertain:  # la variante con incertidumbre no cambia los metadatos v3
+        meta.to_csv(a.metadata.replace(".csv", "_v3.csv"), index=False)
     print(meta.groupby("split_role").agg(n=("patch_id", "count"), noisy=("noisy", "sum"),
                                           pos_v3=("pos_frac_v3", "mean"), pos_weak=("pos_frac", "mean")))
 

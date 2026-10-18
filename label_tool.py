@@ -54,12 +54,14 @@ st.set_page_config(layout="wide", page_title="Fotointerpretación")
 if not SAMPLE.exists():
     st.error("Falta data/labeling/sample.csv: corre `python -m src.sample_for_labeling`.")
     st.stop()
-sample = pd.read_csv(SAMPLE)
+muestras = sorted(p.name for p in (ROOT / "data/labeling").glob("sample*.csv"))
+elegida = st.sidebar.selectbox("Muestra", muestras, index=muestras.index("sample_r3.csv") if "sample_r3.csv" in muestras else 0)
+sample = pd.read_csv(ROOT / "data/labeling" / elegida)
 done = pd.read_csv(LABELS) if LABELS.exists() else pd.DataFrame(columns=["patch_id", "label", "nota"])
-CL = ROOT / "data/labeling/labels_claude.csv"
+CLS = [ROOT / "data/labeling" / f for f in ("labels_claude.csv", "labels_claude_r2.csv")]
 solo_rev = False
-if CL.exists():
-    cl = pd.read_csv(CL).set_index("patch_id")["label"]
+cl = pd.concat([pd.read_csv(f) for f in CLS if f.exists()]).set_index("patch_id")["label"] if any(f.exists() for f in CLS) else pd.Series(dtype=str)
+if sample.patch_id.isin(cl.index).any():  # solo si la muestra tiene sugerencias de Claude (la r3 no: se etiqueta a ciegas)
     solo_rev = st.sidebar.checkbox("Revisar solo lo que Claude marcó sí/dudoso", value=True)
     st.sidebar.caption("Se muestra la sugerencia de Claude para que la confirmes o corrijas.")
     if solo_rev:

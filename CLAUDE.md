@@ -40,6 +40,6 @@ streamlit run app_streamlit.py
 ## Estado y trampas
 
 - `data/` y `outputs/` están vacíos hasta que se copie el dataset desde Drive.
-- Etiquetas v3 (`src/refine_labels.py` → `data/processed/masks_v3`, `patches_metadata_v3.csv` con columna `noisy`) y modelo v3 (`outputs/v3/checkpoints`) son los predeterminados en `config.yaml`. Evaluación contra fotointerpretación: `python -m src.evaluate_patch_level --ckpt outputs/v3/checkpoints --tag v3` (etiquetas en `data/labeling/`).
+- Etiquetas v3 (`src/refine_labels.py` → `data/processed/masks_v3`, `patches_metadata_v3.csv` con columna `noisy`) son las predeterminadas en `config.yaml`; el modelo predeterminado es v6 (`outputs/v6/checkpoints`, afinado desde v3 con `--mdd_frac 0.5 --init_ckpt outputs/v3/checkpoints` sobre `patches_metadata_v4.csv`). Comparar modelos: `python -m src.compare_models v3 v4 v5 v6`. Evaluación contra fotointerpretación: `python -m src.evaluate_patch_level --ckpt outputs/v3/checkpoints --tag v3` (etiquetas en `data/labeling/`).
 - Los parches miden 256×257 (no 256×256): cualquier aumento con rotación debe recortar a cuadrado.
 - Pendiente: falsos positivos del modelo v3 en quebradas sinuosas y bordes de minería.

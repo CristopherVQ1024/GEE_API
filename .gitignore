@@ -18,3 +18,8 @@ outputs/*/checkpoints/*.pt
 outputs/*/checkpoints/*.bak
 data/processed/masks_v3/
 outputs/refine_preview/
+data/deter/*/images/
+data/deter/*/masks/
+data/deter/raw/
+data/deter/*/blocks_done/
+data/processed/masks_v3i/

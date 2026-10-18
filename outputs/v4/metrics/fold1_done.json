@@ -1,0 +1,1 @@
+{"fold": 1, "checkpoint": "outputs/v4/checkpoints/unet_fold1_best.pt", "precision": 0.5116181894150831, "recall": 0.6546862104631523, "f1": 0.5743772293893222, "iou": 0.4028957100853384}

@@ -1,0 +1,105 @@
+===== relanzamiento 2026-10-13 08:39:31 (GPU, workers 2) =====
+    n  cs_km2
+uf           
+AC  7    66.2
+AM  7    73.5
+MT  7   121.4
+PA  7   161.4
+RO  6    21.2
+RR  6    21.7
+  32721_57_943: escenas 21+23, RAM pico del worker 2.3 GB
+[1/40] 32721_57_943 ok
+  32719_40_881: escenas 21+21, RAM pico del worker 2.3 GB
+[2/40] 32719_40_881 ok
+  32721_54_859: escenas 24+23, RAM pico del worker 2.9 GB
+[3/40] 32721_54_859 ok
+  32720_63_837: escenas 23+23, RAM pico del worker 3.1 GB
+[4/40] 32720_63_837 ok
+  32721_27_947: escenas 22+24, RAM pico del worker 2.9 GB
+[5/40] 32721_27_947 ok
+  32722_17_948: escenas 22+23, RAM pico del worker 3.2 GB
+[6/40] 32722_17_948 ok
+  32621_22_11: escenas 19+16, RAM pico del worker 2.3 GB
+[7/40] 32621_22_11 ok
+  32721_26_948: escenas 22+20, RAM pico del worker 2.9 GB
+[8/40] 32721_26_948 ok
+  32720_64_875: escenas 42+44, RAM pico del worker 2.8 GB
+[9/40] 32720_64_875 ok
+  32719_51_870: escenas 21+21, RAM pico del worker 3.1 GB
+[10/40] 32719_51_870 ok
+  32620_75_11: escenas 19+16, RAM pico del worker 2.8 GB
+[11/40] 32620_75_11 ok
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+  32720_76_844: escenas 24+23, RAM pico del worker 2.3 GB
+[12/40] 32720_76_844 ok
+  32721_58_939: escenas 21+24, RAM pico del worker 3.0 GB
+[13/40] 32721_58_939 ok
+  32721_27_948: escenas 22+20, RAM pico del worker 2.3 GB
+[14/40] 32721_27_948 ok
+  32722_17_869: escenas 48+49, RAM pico del worker 3.7 GB
+[15/40] 32722_17_869 ok
+  32719_52_869: escenas 22+22, RAM pico del worker 2.9 GB
+[16/40] 32719_52_869 ok
+  32621_19_6: escenas 19+14, RAM pico del worker 3.7 GB
+[17/40] 32621_19_6 ok
+Ignoring read failure reading https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/22/M/EB/2023/9/S2A_T22MEB_20230920T134706_L2A/B03.tif:1 (reason: 'Read failed. See previous exception for details.')
+Ignoring read failure reading https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/22/M/EB/2023/8/S2A_T22MEB_20230831T135136_L2A/B03.tif:1 (reason: 'Read failed. See previous exception for details.')
+Ignoring read failure reading https://e84-earth-search-sentinel-data.s3.us-west-2.amazonaws.com/sentinel-2-c1-l2a/22/M/EB/2023/9/S2B_T22MEB_20230925T134707_L2A/B03.tif:1 (reason: 'Read failed. See previous exception for details.')
+  32720_52_871: escenas 19+23, RAM pico del worker 3.2 GB
+[18/40] 32720_52_871 ok
+  32722_56_947: escenas 24+24, RAM pico del worker 2.4 GB
+[19/40] 32722_56_947 ok
+  32721_51_944: escenas 21+23, RAM pico del worker 3.0 GB
+[20/40] 32721_51_944 ok
+  32719_47_883: escenas 21+21, RAM pico del worker 3.1 GB
+[21/40] 32719_47_883 ok
+  32620_74_11: escenas 19+16, RAM pico del worker 2.6 GB
+[22/40] 32620_74_11 ok
+  32722_20_858: escenas 25+25, RAM pico del worker 2.6 GB
+[23/40] 32722_20_858 ok
+  32720_61_874: escenas 18+23, RAM pico del worker 3.5 GB
+[24/40] 32720_61_874 ok
+  32720_76_866: escenas 24+21, RAM pico del worker 3.8 GB
+[25/40] 32720_76_866 ok
+  32721_27_945: escenas 21+22, RAM pico del worker 2.7 GB
+[26/40] 32721_27_945 ok
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+  32719_54_867: escenas 21+22, RAM pico del worker 3.5 GB
+[27/40] 32719_54_867 ok
+  32722_19_947: escenas 23+24, RAM pico del worker 3.3 GB
+[28/40] 32722_19_947 ok
+  32720_20_873: escenas 23+22, RAM pico del worker 4.1 GB
+[29/40] 32720_20_873 ok
+  32621_18_10: escenas 18+15, RAM pico del worker 3.3 GB
+[30/40] 32621_18_10 ok
+  32722_67_941: escenas 23+22, RAM pico del worker 2.7 GB
+[31/40] 32722_67_941 ok
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+  32721_72_860: escenas 24+24, RAM pico del worker 2.7 GB
+[32/40] 32721_72_860 ok
+  32719_55_867: escenas 21+22, RAM pico del worker 3.5 GB
+[33/40] 32719_55_867 ok
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+  32621_22_10: escenas 19+16, RAM pico del worker 3.9 GB
+[34/40] 32621_22_10 ok
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+  32720_68_888: escenas 45+44, RAM pico del worker 4.3 GB
+[35/40] 32720_68_888 ok
+  32720_68_845: escenas 24+23, RAM pico del worker 2.7 GB
+[36/40] 32720_68_845 ok
+  32723_17_939: escenas 22+20, RAM pico del worker 4.3 GB
+[37/40] 32723_17_939 ok
+  32721_61_855: escenas 24+23, RAM pico del worker 3.6 GB
+[38/40] 32721_61_855 ok
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+  32719_40_882: escenas 21+21, RAM pico del worker 3.8 GB
+[39/40] 32719_40_882 ok
+  32719_77_878: escenas 46+42, RAM pico del worker 3.2 GB
+[40/40] 32719_77_878 ok
+640 parches -> data/deter/train2024

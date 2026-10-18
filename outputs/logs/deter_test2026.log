@@ -1,0 +1,92 @@
+    n  cs_km2
+uf           
+AC  5    75.7
+AM  5    80.3
+AP  3    22.0
+MA  1     1.0
+MT  5    98.7
+PA  5   128.6
+RO  4    55.2
+RR  4    18.9
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+[1/32] 32721_25_950 ok
+[2/32] 32721_70_911 ok
+[3/32] 32720_52_880 ok
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+[4/32] 32719_50_872 ok
+[5/32] 32621_16_15 ok
+[6/32] 32622_37_0 ok
+[7/32] 32723_25_931 ok
+[8/32] 32722_78_943 ok
+[9/32] 32721_23_850 ok
+[10/32] 32721_47_840 ok
+[11/32] 32721_31_947 ok
+[12/32] 32622_37_1 ok
+[13/32] 32720_50_878 ok
+[14/32] 32719_40_887 ok
+[15/32] 32722_77_944 ok
+[16/32] 32719_80_875 ok
+[17/32] 32621_16_6 ERROR APIError: HTTPSConnectionPool(host='earth-search.aws.element84.com', port=443): Read timed out. (read timeout=None)
+[18/32] 32721_20_874 ok
+[19/32] 32719_58_874 ok
+[20/32] 32720_50_883 ok
+[21/32] 32620_71_22 ok
+[22/32] 32622_38_0 ok
+[23/32] 32719_41_886 ok
+[24/32] 32722_74_937 ok
+[25/32] 32721_25_877 ok
+[26/32] 32721_37_949 ok
+[27/32] 32620_74_5 ok
+[28/32] 32721_69_912 ok
+===== relanzamiento 2026-10-13 08:39:31 (GPU, workers 2) =====
+    n  cs_km2
+uf           
+AC  5    75.7
+AM  5    80.3
+AP  3    22.0
+MA  1     1.0
+MT  5    98.7
+PA  5   128.6
+RO  4    55.2
+RR  4    18.9
+[1/32] 32721_23_850 ok
+[2/32] 32721_25_950 ok
+[3/32] 32721_70_911 ok
+[4/32] 32720_52_880 ok
+[5/32] 32719_50_872 ok
+[6/32] 32622_37_0 ok
+[7/32] 32621_16_15 ok
+[8/32] 32723_25_931 ok
+[9/32] 32722_78_943 ok
+[10/32] 32721_47_840 ok
+[11/32] 32721_31_947 ok
+[12/32] 32719_40_887 ok
+[13/32] 32720_50_878 ok
+[14/32] 32622_37_1 ok
+[15/32] 32722_77_944 ok
+[16/32] 32621_16_6 ok
+[17/32] 32721_20_874 ok
+[18/32] 32719_80_875 ok
+[19/32] 32719_58_874 ok
+[20/32] 32620_71_22 ok
+[21/32] 32720_50_883 ok
+[22/32] 32622_38_0 ok
+[23/32] 32722_74_937 ok
+[24/32] 32721_25_877 ok
+[25/32] 32719_41_886 ok
+[26/32] 32721_37_949 ok
+[27/32] 32620_74_5 ok
+[28/32] 32721_69_912 ok
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+  32720_49_885: escenas 32+34, RAM pico del worker 2.6 GB
+[29/32] 32720_49_885 ok
+  32721_45_839: escenas 58+58, RAM pico del worker 3.2 GB
+[30/32] 32721_45_839 ok
+  32719_37_886: escenas 30+28, RAM pico del worker 3.1 GB
+[31/32] 32719_37_886 ok
+  32721_26_950: escenas 28+32, RAM pico del worker 3.2 GB
+[32/32] 32721_26_950 ok
+512 parches -> data/deter/test2026

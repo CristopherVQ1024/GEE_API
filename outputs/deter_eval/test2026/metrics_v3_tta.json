@@ -1,0 +1,114 @@
+{
+ "n_patches": 512,
+ "tag": "v3_tta",
+ "ckpt": "outputs/v3/checkpoints",
+ "thr": 0.5,
+ "tta": true,
+ "patch": {
+  "n_pos": 175,
+  "n_neg": 196,
+  "top100": {
+   "auc": 0.765,
+   "auc_ic95": [
+    0.714,
+    0.817
+   ],
+   "ap": 0.788,
+   "base": 0.472
+  },
+  "frac": {
+   "auc": 0.761,
+   "auc_ic95": [
+    0.71,
+    0.813
+   ],
+   "ap": 0.755,
+   "base": 0.472
+  }
+ },
+ "patch_hard_neg": {
+  "n_pos": 175,
+  "n_neg": 10,
+  "auc_top100": 0.72,
+  "auc_ic95": [
+   0.573,
+   0.847
+  ],
+  "auc_frac": 0.721
+ },
+ "patch_by_uf": {
+  "AC": {
+   "n_pos": 26,
+   "n_neg": 34,
+   "auc_top100": 0.857
+  },
+  "AM": {
+   "n_pos": 27,
+   "n_neg": 31,
+   "auc_top100": 0.723
+  },
+  "AP": {
+   "n_pos": 16,
+   "n_neg": 31,
+   "auc_top100": 0.873
+  },
+  "MA": {
+   "n_pos": 1,
+   "n_neg": 12,
+   "auc_top100": 1.0
+  },
+  "MT": {
+   "n_pos": 36,
+   "n_neg": 27,
+   "auc_top100": 0.829
+  },
+  "PA": {
+   "n_pos": 39,
+   "n_neg": 14,
+   "auc_top100": 0.756
+  },
+  "RO": {
+   "n_pos": 16,
+   "n_neg": 18,
+   "auc_top100": 0.965
+  },
+  "RR": {
+   "n_pos": 14,
+   "n_neg": 29,
+   "auc_top100": 0.966
+  }
+ },
+ "pixel": {
+  "det_density": {
+   "cs": 0.02526,
+   "cs_other": 0.00679,
+   "other": 0.01681,
+   "clean_forest": 0.00382
+  },
+  "lift_cs_vs_clean_forest": 6.61,
+  "lift_other_vs_clean_forest": 4.4,
+  "share_of_detections_in_cs": 0.492
+ },
+ "polygon": {
+  "n": 246,
+  "clean_density_p95": 0.00781,
+  "hit_rate": 0.553,
+  "chance_hit_rate": 0.05,
+  "median_density_ratio": 3.28,
+  "hit_rate_by_uf": {
+   "AC": 0.412,
+   "AM": 0.692,
+   "AP": 0.92,
+   "MA": 1.0,
+   "MT": 0.346,
+   "PA": 0.315,
+   "RO": 0.762,
+   "RR": 1.0
+  }
+ },
+ "block_spearman_det_vs_deter_area": {
+  "rho": -0.088,
+  "p": 0.6307,
+  "n": 32
+ }
+}

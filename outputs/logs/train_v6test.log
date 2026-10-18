@@ -1,0 +1,13 @@
+Usando device: cuda
+[fold 0] train 1429 (373 MDD) | val MDD 92 DETER 189 | VRAM 3.33 GB
+[fold 0] epoch 1/2 train_loss=0.4214 val_loss=0.4028 MDD loss=0.3227 IoU=0.3115 | DETER loss=0.4829 IoU=0.3382 (9 s)
+[fold 0] epoch 2/2 train_loss=0.4044 val_loss=0.3903 MDD loss=0.3009 IoU=0.3393 | DETER loss=0.4796 IoU=0.3776 (8 s)
+[fold 0] VRAM pico 5.25 GB
+
+=== Resumen validación cruzada espacial (n_folds) ===
+IOU: 0.3721 ± 0.0000
+F1: 0.5424 ± 0.0000
+PRECISION: 0.5152 ± 0.0000
+RECALL: 0.5725 ± 0.0000
+
+Resultados guardados en outputs/v6test/metrics

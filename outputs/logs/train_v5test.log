@@ -1,0 +1,35 @@
+Usando device: cuda
+[fold 0] train 1429 (373 MDD) | val MDD 92 DETER 189 | VRAM 3.24 GB
+[fold 0] epoch 1/1 train_loss=0.6699 val_loss=0.5971 MDD loss=0.5878 IoU=0.0001 | DETER loss=0.6064 IoU=0.0180
+[fold 0] VRAM pico 5.15 GB
+
+=== Resumen validación cruzada espacial (n_folds) ===
+IOU: 0.0164 ± 0.0000
+F1: 0.0323 ± 0.0000
+PRECISION: 0.0422 ± 0.0000
+RECALL: 0.0262 ± 0.0000
+
+Resultados guardados en outputs/v5test/metrics
+	Command being timed: ".venv-gpu/bin/python -m src.train --metadata data/processed/patches_metadata_v4.csv --augment --pos_weight 5 --mdd_frac 0.5 --epochs 1 --folds 0 --tag v5test"
+	User time (seconds): 75.38
+	System time (seconds): 11.26
+	Percent of CPU this job got: 139%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:01.99
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2274932
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 662
+	Minor (reclaiming a frame) page faults: 7648071
+	Voluntary context switches: 17710
+	Involuntary context switches: 5089
+	Swaps: 0
+	File system inputs: 12359520
+	File system outputs: 258256
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

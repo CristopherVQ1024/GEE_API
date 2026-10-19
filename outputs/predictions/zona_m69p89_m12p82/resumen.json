@@ -1,0 +1,361 @@
+{
+ "nombre": "zona_m69p89_m12p82",
+ "centro": [
+  -69.8947,
+  -12.8232
+ ],
+ "lado_km": 5.12,
+ "anios": [
+  2024,
+  2025
+ ],
+ "escenas": [
+  35,
+  42
+ ],
+ "validos": 1.0,
+ "modelo": "outputs/v7c/checkpoints",
+ "umbral": 0.5,
+ "tta": true,
+ "n_detecciones": 31,
+ "n_baja_confianza": 2,
+ "area_detectada_ha": 7.04,
+ "cuadros_no_evaluables": 0,
+ "cuadros": [
+  {
+   "fila": 0,
+   "col": 0,
+   "ruido_dNDFI": 0.0303,
+   "calidad": "ok",
+   "valido": 1.0,
+   "puntaje_top100": 0.582,
+   "frac_detectada": 0.0009
+  },
+  {
+   "fila": 0,
+   "col": 1,
+   "ruido_dNDFI": 0.0306,
+   "calidad": "ok",
+   "valido": 1.0,
+   "puntaje_top100": 0.809,
+   "frac_detectada": 0.0023
+  },
+  {
+   "fila": 1,
+   "col": 0,
+   "ruido_dNDFI": 0.0288,
+   "calidad": "ok",
+   "valido": 1.0,
+   "puntaje_top100": 0.952,
+   "frac_detectada": 0.0042
+  },
+  {
+   "fila": 1,
+   "col": 1,
+   "ruido_dNDFI": 0.0316,
+   "calidad": "ok",
+   "valido": 1.0,
+   "puntaje_top100": 0.989,
+   "frac_detectada": 0.0047
+  }
+ ],
+ "detecciones": [
+  {
+   "id": 1,
+   "area_ha": 1.0,
+   "prob_media": 0.763,
+   "confianza": "alta",
+   "lon": -69.894573,
+   "lat": -12.82458,
+   "calidad": "ok"
+  },
+  {
+   "id": 2,
+   "area_ha": 0.62,
+   "prob_media": 0.933,
+   "confianza": "alta",
+   "lon": -69.890671,
+   "lat": -12.841546,
+   "calidad": "ok"
+  },
+  {
+   "id": 3,
+   "area_ha": 0.72,
+   "prob_media": 0.699,
+   "confianza": "media",
+   "lon": -69.880209,
+   "lat": -12.81414,
+   "calidad": "ok"
+  },
+  {
+   "id": 4,
+   "area_ha": 0.55,
+   "prob_media": 0.828,
+   "confianza": "alta",
+   "lon": -69.877261,
+   "lat": -12.827622,
+   "calidad": "ok"
+  },
+  {
+   "id": 5,
+   "area_ha": 0.47,
+   "prob_media": 0.85,
+   "confianza": "alta",
+   "lon": -69.908901,
+   "lat": -12.837234,
+   "calidad": "ok"
+  },
+  {
+   "id": 6,
+   "area_ha": 0.4,
+   "prob_media": 0.794,
+   "confianza": "alta",
+   "lon": -69.916404,
+   "lat": -12.835354,
+   "calidad": "ok"
+  },
+  {
+   "id": 7,
+   "area_ha": 0.38,
+   "prob_media": 0.831,
+   "confianza": "alta",
+   "lon": -69.890897,
+   "lat": -12.827124,
+   "calidad": "ok"
+  },
+  {
+   "id": 8,
+   "area_ha": 0.39,
+   "prob_media": 0.766,
+   "confianza": "alta",
+   "lon": -69.895017,
+   "lat": -12.819831,
+   "calidad": "ok"
+  },
+  {
+   "id": 9,
+   "area_ha": 0.27,
+   "prob_media": 0.753,
+   "confianza": "alta",
+   "lon": -69.87815,
+   "lat": -12.844889,
+   "calidad": "ok"
+  },
+  {
+   "id": 10,
+   "area_ha": 0.2,
+   "prob_media": 0.845,
+   "confianza": "alta",
+   "lon": -69.896697,
+   "lat": -12.825929,
+   "calidad": "ok"
+  },
+  {
+   "id": 11,
+   "area_ha": 0.16,
+   "prob_media": 0.863,
+   "confianza": "alta",
+   "lon": -69.8912,
+   "lat": -12.808677,
+   "calidad": "ok"
+  },
+  {
+   "id": 12,
+   "area_ha": 0.22,
+   "prob_media": 0.526,
+   "confianza": "baja",
+   "lon": -69.912024,
+   "lat": -12.834511,
+   "calidad": "ok"
+  },
+  {
+   "id": 13,
+   "area_ha": 0.13,
+   "prob_media": 0.875,
+   "confianza": "alta",
+   "lon": -69.890606,
+   "lat": -12.823011,
+   "calidad": "ok"
+  },
+  {
+   "id": 14,
+   "area_ha": 0.13,
+   "prob_media": 0.85,
+   "confianza": "alta",
+   "lon": -69.917989,
+   "lat": -12.840638,
+   "calidad": "ok"
+  },
+  {
+   "id": 15,
+   "area_ha": 0.18,
+   "prob_media": 0.609,
+   "confianza": "media",
+   "lon": -69.892227,
+   "lat": -12.812426,
+   "calidad": "ok"
+  },
+  {
+   "id": 16,
+   "area_ha": 0.13,
+   "prob_media": 0.828,
+   "confianza": "alta",
+   "lon": -69.882796,
+   "lat": -12.842703,
+   "calidad": "ok"
+  },
+  {
+   "id": 17,
+   "area_ha": 0.12,
+   "prob_media": 0.775,
+   "confianza": "alta",
+   "lon": -69.900086,
+   "lat": -12.833015,
+   "calidad": "ok"
+  },
+  {
+   "id": 18,
+   "area_ha": 0.15,
+   "prob_media": 0.613,
+   "confianza": "media",
+   "lon": -69.902774,
+   "lat": -12.824551,
+   "calidad": "ok"
+  },
+  {
+   "id": 19,
+   "area_ha": 0.1,
+   "prob_media": 0.901,
+   "confianza": "alta",
+   "lon": -69.880164,
+   "lat": -12.840994,
+   "calidad": "ok"
+  },
+  {
+   "id": 20,
+   "area_ha": 0.1,
+   "prob_media": 0.885,
+   "confianza": "alta",
+   "lon": -69.872505,
+   "lat": -12.837855,
+   "calidad": "ok"
+  },
+  {
+   "id": 21,
+   "area_ha": 0.1,
+   "prob_media": 0.837,
+   "confianza": "alta",
+   "lon": -69.888639,
+   "lat": -12.814021,
+   "calidad": "ok"
+  },
+  {
+   "id": 22,
+   "area_ha": 0.1,
+   "prob_media": 0.793,
+   "confianza": "alta",
+   "lon": -69.871203,
+   "lat": -12.834378,
+   "calidad": "ok"
+  },
+  {
+   "id": 23,
+   "area_ha": 0.1,
+   "prob_media": 0.756,
+   "confianza": "alta",
+   "lon": -69.898755,
+   "lat": -12.821446,
+   "calidad": "ok"
+  },
+  {
+   "id": 24,
+   "area_ha": 0.08,
+   "prob_media": 0.808,
+   "confianza": "alta",
+   "lon": -69.909121,
+   "lat": -12.834611,
+   "calidad": "ok"
+  },
+  {
+   "id": 25,
+   "area_ha": 0.07,
+   "prob_media": 0.858,
+   "confianza": "alta",
+   "lon": -69.91606,
+   "lat": -12.842228,
+   "calidad": "ok"
+  },
+  {
+   "id": 26,
+   "area_ha": 0.06,
+   "prob_media": 0.956,
+   "confianza": "alta",
+   "lon": -69.90691,
+   "lat": -12.834529,
+   "calidad": "ok"
+  },
+  {
+   "id": 27,
+   "area_ha": 0.09,
+   "prob_media": 0.568,
+   "confianza": "baja",
+   "lon": -69.879639,
+   "lat": -12.82246,
+   "calidad": "ok"
+  },
+  {
+   "id": 28,
+   "area_ha": 0.06,
+   "prob_media": 0.83,
+   "confianza": "alta",
+   "lon": -69.913279,
+   "lat": -12.837536,
+   "calidad": "ok"
+  },
+  {
+   "id": 29,
+   "area_ha": 0.06,
+   "prob_media": 0.771,
+   "confianza": "alta",
+   "lon": -69.914811,
+   "lat": -12.802539,
+   "calidad": "ok"
+  },
+  {
+   "id": 30,
+   "area_ha": 0.05,
+   "prob_media": 0.918,
+   "confianza": "alta",
+   "lon": -69.914724,
+   "lat": -12.842187,
+   "calidad": "ok"
+  },
+  {
+   "id": 31,
+   "area_ha": 0.05,
+   "prob_media": 0.851,
+   "confianza": "alta",
+   "lon": -69.914528,
+   "lat": -12.838932,
+   "calidad": "ok"
+  },
+  {
+   "id": 32,
+   "area_ha": 0.06,
+   "prob_media": 0.664,
+   "confianza": "media",
+   "lon": -69.895177,
+   "lat": -12.826069,
+   "calidad": "ok"
+  },
+  {
+   "id": 33,
+   "area_ha": 0.05,
+   "prob_media": 0.644,
+   "confianza": "media",
+   "lon": -69.890242,
+   "lat": -12.824368,
+   "calidad": "ok"
+  }
+ ]
+}

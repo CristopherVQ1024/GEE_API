@@ -1,0 +1,8 @@
+Zona 5.12 km × 5.12 km en EPSG:32719; descargando Sentinel-2 2024 y 2025...
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+Escenas: 22 + 31; píxeles válidos 100%
+
+0 detecciones de confianza alta o media, 0 ha (0 de confianza baja aparte); cuadros no evaluables por neblina: 0/4
+
+Salida en outputs/predictions/zona_m68p21_m10p20/ (abrir detecciones.kml en Google Earth y panel.png)

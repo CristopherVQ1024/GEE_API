@@ -1,0 +1,15 @@
+Zona 5.12 km × 5.12 km en EPSG:32719; descargando Sentinel-2 2024 y 2025...
+/home/cristopher/Documentos/GitHub/GEE_API/.venv-gpu/lib/python3.13/site-packages/rasterio/warp.py:390: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.
+  dest = _reproject(
+Escenas: 22 + 27; píxeles válidos 100%
+
+7 detecciones de confianza alta o media, 1.36 ha (1 de confianza baja aparte); cuadros no evaluables por neblina: 0/4
+  #  1    0.81 ha  prob 0.92 (alta)  -12.77281, -69.36924  calidad ok
+  #  2    0.21 ha  prob 0.74 (media)  -12.73616, -69.35558  calidad ok
+  #  3    0.11 ha  prob 0.92 (alta)  -12.76614, -69.35429  calidad ok
+  #  4    0.08 ha  prob 0.88 (alta)  -12.75998, -69.32751  calidad ok
+  #  5    0.05 ha  prob 0.89 (alta)  -12.75699, -69.33244  calidad ok
+  #  6    0.05 ha  prob 0.88 (alta)  -12.77249, -69.37055  calidad ok
+  #  7    0.05 ha  prob 0.85 (alta)  -12.77272, -69.32988  calidad ok
+
+Salida en outputs/predictions/prueba_tambopata/ (abrir detecciones.kml en Google Earth y panel.png)

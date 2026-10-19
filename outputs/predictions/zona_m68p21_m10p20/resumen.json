@@ -1,0 +1,63 @@
+{
+ "nombre": "zona_m68p21_m10p20",
+ "centro": [
+  -68.20862,
+  -10.20411
+ ],
+ "lado_km": 5.12,
+ "anios": [
+  2024,
+  2025
+ ],
+ "escenas": [
+  22,
+  31
+ ],
+ "validos": 1.0,
+ "modelo": "outputs/v7c/checkpoints",
+ "umbral": 0.5,
+ "tta": true,
+ "n_detecciones": 0,
+ "n_baja_confianza": 0,
+ "area_detectada_ha": 0,
+ "cuadros_no_evaluables": 0,
+ "cuadros": [
+  {
+   "fila": 0,
+   "col": 0,
+   "ruido_dNDFI": 0.0414,
+   "calidad": "baja",
+   "valido": 1.0,
+   "puntaje_top100": 0.101,
+   "frac_detectada": 0.0
+  },
+  {
+   "fila": 0,
+   "col": 1,
+   "ruido_dNDFI": 0.0421,
+   "calidad": "baja",
+   "valido": 1.0,
+   "puntaje_top100": 0.027,
+   "frac_detectada": 0.0
+  },
+  {
+   "fila": 1,
+   "col": 0,
+   "ruido_dNDFI": 0.044,
+   "calidad": "baja",
+   "valido": 1.0,
+   "puntaje_top100": 0.159,
+   "frac_detectada": 0.0
+  },
+  {
+   "fila": 1,
+   "col": 1,
+   "ruido_dNDFI": 0.0443,
+   "calidad": "baja",
+   "valido": 1.0,
+   "puntaje_top100": 0.218,
+   "frac_detectada": 0.0
+  }
+ ],
+ "detecciones": []
+}

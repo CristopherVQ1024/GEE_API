@@ -1,0 +1,21 @@
+Zona 5.12 km × 5.12 km en EPSG:32719; descargando Sentinel-2 2024 y 2025...
+Escenas: 35 + 42; píxeles válidos 100%
+
+31 detecciones de confianza alta o media, 7.04 ha (2 de confianza baja aparte); cuadros no evaluables por neblina: 0/4
+  #  1     1.0 ha  prob 0.76 (alta)  -12.82458, -69.89457  calidad ok
+  #  2    0.62 ha  prob 0.93 (alta)  -12.84155, -69.89067  calidad ok
+  #  3    0.72 ha  prob 0.70 (media)  -12.81414, -69.88021  calidad ok
+  #  4    0.55 ha  prob 0.83 (alta)  -12.82762, -69.87726  calidad ok
+  #  5    0.47 ha  prob 0.85 (alta)  -12.83723, -69.90890  calidad ok
+  #  6     0.4 ha  prob 0.79 (alta)  -12.83535, -69.91640  calidad ok
+  #  7    0.38 ha  prob 0.83 (alta)  -12.82712, -69.89090  calidad ok
+  #  8    0.39 ha  prob 0.77 (alta)  -12.81983, -69.89502  calidad ok
+  #  9    0.27 ha  prob 0.75 (alta)  -12.84489, -69.87815  calidad ok
+  # 10     0.2 ha  prob 0.84 (alta)  -12.82593, -69.89670  calidad ok
+  # 11    0.16 ha  prob 0.86 (alta)  -12.80868, -69.89120  calidad ok
+  # 13    0.13 ha  prob 0.88 (alta)  -12.82301, -69.89061  calidad ok
+  # 14    0.13 ha  prob 0.85 (alta)  -12.84064, -69.91799  calidad ok
+  # 15    0.18 ha  prob 0.61 (media)  -12.81243, -69.89223  calidad ok
+  # 16    0.13 ha  prob 0.83 (alta)  -12.84270, -69.88280  calidad ok
+
+Salida en outputs/predictions/zona_m69p89_m12p82/ (abrir detecciones.kml en Google Earth y panel.png)

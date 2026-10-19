@@ -1,0 +1,136 @@
+{
+ "nombre": "prueba_tambopata",
+ "centro": [
+  -69.35,
+  -12.75
+ ],
+ "lado_km": 5.12,
+ "anios": [
+  2024,
+  2025
+ ],
+ "escenas": [
+  22,
+  27
+ ],
+ "validos": 1.0,
+ "modelo": "outputs/v7c/checkpoints",
+ "umbral": 0.5,
+ "tta": false,
+ "n_detecciones": 7,
+ "n_baja_confianza": 1,
+ "area_detectada_ha": 1.36,
+ "cuadros_no_evaluables": 0,
+ "cuadros": [
+  {
+   "fila": 0,
+   "col": 0,
+   "ruido_dNDFI": 0.0305,
+   "calidad": "ok",
+   "valido": 1.0,
+   "puntaje_top100": 0.345,
+   "frac_detectada": 0.0004
+  },
+  {
+   "fila": 0,
+   "col": 1,
+   "ruido_dNDFI": 0.0392,
+   "calidad": "ok",
+   "valido": 1.0,
+   "puntaje_top100": 0.23,
+   "frac_detectada": 0.0001
+  },
+  {
+   "fila": 1,
+   "col": 0,
+   "ruido_dNDFI": 0.0392,
+   "calidad": "ok",
+   "valido": 1.0,
+   "puntaje_top100": 0.911,
+   "frac_detectada": 0.0016
+  },
+  {
+   "fila": 1,
+   "col": 1,
+   "ruido_dNDFI": 0.0389,
+   "calidad": "ok",
+   "valido": 1.0,
+   "puntaje_top100": 0.365,
+   "frac_detectada": 0.0005
+  }
+ ],
+ "detecciones": [
+  {
+   "id": 1,
+   "area_ha": 0.81,
+   "prob_media": 0.915,
+   "confianza": "alta",
+   "lon": -69.369242,
+   "lat": -12.772807,
+   "calidad": "ok"
+  },
+  {
+   "id": 2,
+   "area_ha": 0.21,
+   "prob_media": 0.742,
+   "confianza": "media",
+   "lon": -69.355579,
+   "lat": -12.736157,
+   "calidad": "ok"
+  },
+  {
+   "id": 3,
+   "area_ha": 0.11,
+   "prob_media": 0.918,
+   "confianza": "alta",
+   "lon": -69.354285,
+   "lat": -12.766135,
+   "calidad": "ok"
+  },
+  {
+   "id": 4,
+   "area_ha": 0.08,
+   "prob_media": 0.875,
+   "confianza": "alta",
+   "lon": -69.327513,
+   "lat": -12.759975,
+   "calidad": "ok"
+  },
+  {
+   "id": 5,
+   "area_ha": 0.05,
+   "prob_media": 0.889,
+   "confianza": "alta",
+   "lon": -69.332438,
+   "lat": -12.756985,
+   "calidad": "ok"
+  },
+  {
+   "id": 6,
+   "area_ha": 0.05,
+   "prob_media": 0.883,
+   "confianza": "alta",
+   "lon": -69.370555,
+   "lat": -12.772488,
+   "calidad": "ok"
+  },
+  {
+   "id": 7,
+   "area_ha": 0.05,
+   "prob_media": 0.854,
+   "confianza": "alta",
+   "lon": -69.329879,
+   "lat": -12.772723,
+   "calidad": "ok"
+  },
+  {
+   "id": 8,
+   "area_ha": 0.06,
+   "prob_media": 0.578,
+   "confianza": "baja",
+   "lon": -69.362665,
+   "lat": -12.764044,
+   "calidad": "ok"
+  }
+ ]
+}
